@@ -4,7 +4,7 @@
 
   <groupId>com.porto111</groupId>
   <artifactId>advanced-api-test</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.5</version>
   <packaging>maven-plugin</packaging>
 
   <name>advanced-api-test Maven Plugin</name>
