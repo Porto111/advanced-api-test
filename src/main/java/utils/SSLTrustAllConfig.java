@@ -15,18 +15,20 @@ import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
+
 public class SSLTrustAllConfig {
 
     /**
      * Configura o Rest Assured para confiar em todos os certificados SSL.
-     * Use apenas em ambientes de teste, não em produção.
+     * Esta configuração deve ser utilizada apenas em ambientes de teste, nunca em produção.
      */
+
     public static void trustAllCertificates() {
         try {
             TrustStrategy trustStrategy = new TrustStrategy() {
                 @Override
                 public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-                    return true; // Confia em todos os certificados
+                    return true;
                 }
             };
 
@@ -43,6 +45,7 @@ public class SSLTrustAllConfig {
      * Método alternativo usando SSLContext diretamente.
      * Use se o método acima não funcionar.
      */
+
     public static void trustAllCertificatesAlternative() {
         try {
             TrustManager[] trustAllCerts = new TrustManager[]{
