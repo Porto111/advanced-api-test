@@ -68,9 +68,10 @@ public class InstituicoesSteps {
                 responseBody.contains(nomeInstituicao));
 
         // Alternativa usando JsonPath para verificar em uma lista de instituições
+
         // List<String> nomes = response.jsonPath().getList("data.nome");
-        // Assert.assertTrue("A lista deve conter a instituição " + nomeInstituicao,
-        //                  nomes.contains(nomeInstituicao));
+        // Assert.assertTrue("A lista deve conter a instituição " + nomeInstituicao, nomes.contains(nomeInstituicao));
+
     }
 
     @Then("o campo {string} deve ser igual a {int}")
